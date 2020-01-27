@@ -4,7 +4,7 @@ Class Config{
 //INFORMAÇÕES DO SITE
 const SITE_URL = "http://localhost";
 const SITE_PASTA = "loja_demostracao";
-const SITE_NOME = "Vanusa Esportes";
+const SITE_NOME = "Loja Demostração";
 const SITE_EMAIL_ADM = "leandrinholopes069@gmail.com";
 const BD_LIMIT_POR_PAG = 12;
 const BD_LIMIT_POR_PRODUTOS = 4;

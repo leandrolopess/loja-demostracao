@@ -26,7 +26,7 @@
                
                 <div class="col-md-4 thumbnail" id="bloco_login_adm">
                  
-                    <img src="{$GET_TEMA}/assets/images/icons/logo.png" class="logo">
+                    <img src="{$HOME}/media/img/seu-logo.png" class="logo">
                    
                     <div class="mt-20">
                     <form name="login" method="post" action="" class="{$SHAKE}">
