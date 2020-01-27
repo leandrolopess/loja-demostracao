@@ -1,0 +1,99 @@
+.telegram-share-button{
+position: relative;
+display: inline-block;            
+width: 40px;
+height: 20px;
+background-size: 100% 100%; /* ou 'contain' */
+background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM1RUJFRTE7fQoJLnN0MXtmaWxsOiNGRkZGRkY7fQo8L3N0eWxlPjxnPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01MTIsMzk3LjFjMCw2My41LTUxLjUsMTE0LjktMTE0LjksMTE0LjlIMTE0LjlDNTEuNSw1MTIsMCw0NjAuNSwwLDM5Ny4xVjExNC45QzAsNTEuNSw1MS41LDAsMTE0LjksMGgyODIuMiAgIEM0NjAuNSwwLDUxMiw1MS41LDUxMiwxMTQuOVYzOTcuMXoiLz48cGF0aCBjbGFzcz0ic3QxIiBkPSJNMzgzLjEsMTM0LjFMMTE2LjMsMjM4Yy04LjYsMy40LTguMSwxNS44LDAuOCwxOC40bDY3LjgsMjBsMjUuMyw4MC4zYzIuNiw4LjQsMTMuMywxMC45LDE5LjQsNC42bDM1LjEtMzUuOCAgIGw2OC44LDUwLjVjOC40LDYuMiwyMC40LDEuNiwyMi41LTguNmw0NS41LTIxNy44QzQwMy44LDEzOSwzOTMuMywxMzAuMSwzODMuMSwxMzQuMUwzODMuMSwxMzQuMUwzODMuMSwxMzQuMXogTTM0OS43LDE4Mi40ICAgTDIyNS44LDI5MmMtMS4yLDEuMS0yLDIuNi0yLjIsNC4ybC00LjgsNDIuNGMtMC4yLDEuNC0yLjEsMS42LTIuNSwwLjJsLTE5LjYtNjMuM2MtMC45LTIuOSwwLjMtNiwyLjktNy42bDE0Ni4zLTkwLjggICBDMzQ5LjIsMTc1LjIsMzUyLjcsMTc5LjgsMzQ5LjcsMTgyLjRMMzQ5LjcsMTgyLjRMMzQ5LjcsMTgyLjR6Ii8+PC9nPjwvc3ZnPg=="); /*Base 64 Icon by Hopnguyen Mr*/
+background-repeat: no-repeat;
+background-position: center;
+margin-left: 84%;
+top: 151px;
+}
+
+#twitter-widget-0{margin-left: 52%;margin-top: 166px;}
+.whats-btn img{margin-left: -3%;height:20px; z-index:100;position: relative;top: 417px; left: -23px;}
+
+
+.icon-bar {
+  position: fixed;
+  top: 300px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+ z-index: 1500;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 10px 10px 10px 10px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.telegram {
+  background: #24a2d4;
+  color: white;
+}
+.whats {
+  background: green;
+  color: white;
+}
+
+
+/* botao compartilhar*/ 
+@media only screen and (min-width: 250px) and (max-width: 350px) { 
+.face-btn iframe{ position: relative; left: 0; margin-left: 8%; top:315px; }
+#twitter-widget-0 { margin-left: 43%;margin-top: 185px; }
+.telegram-share-button{ position: relative; top: 351px; margin-left: 61%; }
+.whats-btn img { position: relative; top: 283px; left: 0; margin-left: 74%; }}
+
+/* botao compartilhar*/
+@media only screen and (min-width: 350px) and (max-width: 500px) { 
+.face-btn iframe{ position: relative; left: 0; margin-left: 10%; top:315px; }
+#twitter-widget-0 { margin-left: 40%;margin-top: 185px; }
+.telegram-share-button{ position: relative; top: 351px; margin-left: 56%; }
+.whats-btn img { position: relative; top: 283px; left: 0; margin-left: 70%; }}
+
+
+@media only screen and (min-width: 100px) and (max-width: 380px) { 
+.icon-bar a {margin: 0 0px 0 0;}
+.icon-bar{display: flex; margin-left:15%;top:580px;}}
+
+@media only screen and (min-width: 380px) and (max-width: 500px) { 
+.icon-bar a {margin: 0 0px 0 0;}
+.icon-bar{display: flex; margin-left: 22%;top:580px;}}
+
+
+/*@media only screen and (min-width: 500px) and (max-width: 800px) { 
+.icon-bar a {display: none;}
+.icon-bar{display: none;}
+}*/

@@ -1,0 +1,5 @@
+lib/
+.vscode
+teste.php
+composerUpdate.bat
+composer.phar

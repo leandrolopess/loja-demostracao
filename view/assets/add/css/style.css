@@ -1,0 +1,68 @@
+/*Cores*/
+.white{color:#FFF;}
+.huge a:hover{color:#FFF;}
+.black a{color:#000;}
+.black{color:000;}
+.red{color:#ed1313;}
+.green{color:#11b907;}
+.cinza a{color:#777;}
+/*Elementos*/
+.margin-top{margin-top:15px;}
+.margin-top-negativo{margin-top:-15px;}
+/*Painel*/
+.huge{font-size:35px;margin-top:15px;}
+.tag-boxes .panel-primary{border:1px solid #2FA4E7;}
+.icon-arrow i{float:right;margin-top:5px;}
+/*Painel Azul*/
+.tag-boxes .panel-primary span{color:#337ab7;}
+.tag-boxes .panel-primary span:hover{color:#23527c;}
+/*Painel Vermelho*/
+.tag-boxes .panel-red{color:#FFF;background:#db2621;}
+.tag-boxes .panel-red a{color:#db2621;}
+.tag-boxes .panel-red a:hover{color:#b52b27;}
+/*Painel Amarelo*/
+.tag-boxes .panel-yellow{color:#FFF;background:#f0ad4e;}
+.tag-boxes .panel-yellow a{color:#f0ad4e;}
+.tag-boxes .panel-yellow a:hover{color:#df8a13;}
+/*Painel Verde*/
+.tag-boxes .panel-green{color:#FFF;background:#5cb85c;}
+.tag-boxes .panel-green a{color:#5cb85c;}
+.tag-boxes .panel-green a:hover{color:#3d8b3d;}
+/*Painel Roxo*/
+.tag-boxes .panel-purple{color:#FFF;background:#341471;}
+.tag-boxes .panel-purple a{color:#341471;}
+.tag-boxes .panel-purple a:hover{color:#341471;}
+/*Foto de perfil do usuário*/
+.profile-photo{margin-left:25%;}
+/*Preview da imagem*/
+.preview-imagem img {width:150px;margin-top:30px;margin-bottom:15px;}
+/*Input enviar imagem*/
+.form-group i {font-size:80px;margin-left:1%;color:#2FA4E7;}
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.inputfile:focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+/*Nome do Usuário no cabeçalho*/
+.user-name{background-color:#FFF;border:1px solid #000;}
+.user-name h5{color: #000;}
+/*Efeito foto de Perfil*/
+body#profile img#profile-image{
+-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+/*Modal Upload Imagem */
+.modal-header{border-bottom:none;}
+.modal-footer{border-top:none;text-align:center;}
+
+.carro-imagem img{width:250px;height:auto;margin-bottom:15px;}
