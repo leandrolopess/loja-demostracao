@@ -61,7 +61,7 @@
 
 				<!-- Logo desktop -->
 				<a href="{$GET_HOME}" class="logo">
-					<img src="{$GET_TEMA}/assets/images/icons/logo.png" alt="IMG-LOGO">
+					<img src="{$GET_HOME}/media/img/seu-logo.png" alt="IMG-LOGO">
 				</a>
 
 				<!-- Menu desktop -->
@@ -158,7 +158,7 @@
 	<div class="wrap-header-mobile">
 		<!-- Logo moblie -->
 		<div class="logo-mobile">
-			<a href="{$GET_HOME}"><img src="{$GET_TEMA}/assets/images/icons/logo.png" alt="IMG-LOGO"></a>
+			<a href="{$GET_HOME}"><img src="{$GET_HOME}/media/img/seu-logo.png" alt="IMG-LOGO"></a>
 		</div>
 
 		<!-- Icon header -->
