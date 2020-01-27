@@ -565,14 +565,14 @@
 
 					<div class="margin-left">
 						{if $FACE != ''}
-						<a href="$FACE" class="fs-18 cl7 hov-cl1 trans-04 m-r-16" target="_blank">
+						<a href="{$FACE}" class="fs-18 cl7 hov-cl1 trans-04 m-r-16" target="_blank">
 							<i class="fa fa-facebook"></i>
 						</a>
 						{else}
 						{/if}
 
 						{if $INSTA != ''}
-						<a href="$INSTA" class="fs-18 cl7 hov-cl1 trans-04 m-r-16" target="_blank">
+						<a href="{$INSTA}" class="fs-18 cl7 hov-cl1 trans-04 m-r-16" target="_blank">
 							<i class="fa fa-instagram"></i>
 						</a>
 						{else}
