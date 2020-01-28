@@ -109,6 +109,7 @@ if($gravar->Alterar($id)){
 if(isset($_POST['pro_nome']) && isset($_POST['pro_valor']) && $_SESSION['ADM']['user_status'] != 'admin'){
   echo'<script>alert("Acesso Negado!!")</script>';
 }
+
 if(isset($_POST['pro_apagar']) && isset($_POST['pro_id_apagar']) && $_POST['confirmar'] == 'SIM' && $_SESSION['ADM']['user_status'] != 'admin'){
   echo'<script>alert("Acesso Negado!!")</script>';
 }

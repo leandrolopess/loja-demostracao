@@ -2,6 +2,15 @@
 
 $smarty = new Template();
 
+
+if(Login::LogadoADM()){
+	$smarty->assign('USER', $_SESSION['ADM']['user_nome']);
+	$smarty->assign('DATA', $_SESSION['ADM']['user_data']);
+	$smarty->assign('HORA', $_SESSION['ADM']['user_hora']);
+	$smarty->assign('SOBRENOME', $_SESSION['ADM']['user_sobrenome']);
+	$smarty->assign('STATUS', $_SESSION['ADM']['user_status']);
+}
+
 $categorias = new Categorias();
 $categorias->GetCategorias('masculino');
 
@@ -31,7 +40,7 @@ $smarty->assign('AVISO', '<div class="alert alert-warning alert-dismissible fade
 </div>');
 
 
-if(isset($_POST['pro_nome']) && isset($_POST['pro_valor'])){
+if(isset($_POST['pro_nome']) && isset($_POST['pro_valor']) && $_SESSION['ADM']['user_status'] == 'admin'){
 $pro_nome      = $_POST['pro_nome'];
 $pro_categoria = $_POST['pro_categoria'];
 $pro_ativo     = $_POST['pro_ativo'];
@@ -71,6 +80,11 @@ if($gravar->Inserir()){
 	echo'<script>alert("Ocorreu um erro, tente novamente")</script>';
 	exit();
  }
+}
+
+// Verifica se o usuário é admin
+if(isset($_POST['pro_nome']) && isset($_POST['pro_valor']) && $_SESSION['ADM']['user_status'] != 'admin'){
+  echo'<script>alert("Acesso Negado!!")</script>';
 }
 
 
