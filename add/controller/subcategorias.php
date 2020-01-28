@@ -1,6 +1,15 @@
 <?php 
 
 $smarty = new Template();
+
+if(Login::LogadoADM()){
+	$smarty->assign('USER', $_SESSION['ADM']['user_nome']);
+	$smarty->assign('DATA', $_SESSION['ADM']['user_data']);
+	$smarty->assign('HORA', $_SESSION['ADM']['user_hora']);
+	$smarty->assign('SOBRENOME', $_SESSION['ADM']['user_sobrenome']);
+	$smarty->assign('STATUS', $_SESSION['ADM']['user_status']);
+}
+
 $categorias = new Categorias();
 $categorias->GetCategorias('masculino');
 
@@ -16,7 +25,7 @@ $smarty->assign('SUCESSO', '');
 $smarty->assign('ERRO', '');
 
 
- if(isset($_POST['cate_nova'])){
+ if(isset($_POST['cate_nova']) && $_SESSION['ADM']['user_status'] == 'admin'){
    $cate_nome = $_POST['cate_nome'];
     $pro_categoria = $_POST['pro_categoria'];
     if($categorias->Inserir($cate_nome, 'categoria'. '-' .$pro_categoria. '-' .$cate_nome, $pro_categoria)){
@@ -27,7 +36,7 @@ $smarty->assign('ERRO', '');
     }
  }
 
- if(isset($_POST['cate_apagar'])){
+ if(isset($_POST['cate_apagar']) && $_SESSION['ADM']['user_status'] == 'admin'){
    $cate_id = $_POST['cate_id'];
     if($categorias->Apagar($cate_id)){
       $smarty->assign('SUCESSO', '<center><div class="col-md-9"><ul class="woo-sucesso margin-top" role="alert">
@@ -53,7 +62,14 @@ $smarty->assign('TOTAL_FEMENINO', $categoriasfe->TotalDados());
 $smarty->assign('TOTAL_INFANTIL', $categoriasin->TotalDados());
 $smarty->assign('TOTAL_BOLAS', $categoriasbo->TotalDados());
 
+// Verifica se o usuário é admin
+if(isset($_POST['cate_nova']) && $_SESSION['ADM']['user_status'] != 'admin'){
+  echo'<script>alert("Acesso Negado!!")</script>';
+}
 
+if(isset($_POST['cate_apagar']) && $_SESSION['ADM']['user_status'] != 'admin'){
+  echo'<script>alert("Acesso Negado!!")</script>';
+}
 
 //$smarty->display('./inc/top-painel.tpl');
 //$smarty->display('./inc/header.tpl');

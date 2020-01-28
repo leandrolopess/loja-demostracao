@@ -126,18 +126,18 @@
           <div class="wrap-icon-header flex-w flex-r-m h-full">
             
             
-            <div class="flex-c-m h-full p-l-18 bor5">
+            <!-- <div class="flex-c-m h-full p-l-18 bor5">
               <div class="icon-header-item cl2 hov-cl1 trans-04">
                 <a href="{$PAG_MINHACONTA}"><i class="f-35 zmdi zmdi-account margin-top-negativo"></i>
                 </a>
               </div>
-            </div>
+            </div> -->
               
-            <div class="flex-c-m h-full p-lr-19">
+            <!-- <div class="flex-c-m h-full p-lr-19">
               <div class="icon-header-item cl2 hov-cl1 trans-04 js-show-sidebar">
                 <i class="zmdi zmdi-menu f-30"></i>
               </div>
-            </div>
+            </div> -->
           </div>
         </nav>
       </div>  
@@ -245,7 +245,7 @@
 
           <li class="p-b-13">
             <a href="#" class="stext-102 cl2 hov-cl1 trans-04">
-              My Wishlist
+              Meus Favoritos
             </a>
           </li>
                    
