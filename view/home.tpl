@@ -10,17 +10,21 @@
     <div class="carousel-inner">
      {foreach from=$DESTAQUE item=D}
       <div class="carousel-item active">
-        <img src="media/banners/{$D.banner_img}" class="d-block w-100" alt="{$D.banner_titulo}">
+		<img src="media/banners/{$D.banner_img}" class="d-block w-100" alt="{$D.banner_titulo}">
+		<div class="carousel-caption d-none d-md-block">
+		    <h5>{$D.banner_titulo}</h5>
+		    <p>{$D.banner_descricao}</p>
+		  </div> 
       </div>
      {/foreach}
 
 {foreach from=$IMAGES item=I}
       <div class="carousel-item">
         <img src="media/banners/{$I.banner_img}" class="d-block w-100" alt="{$I.banner_titulo}">
-         <!-- <div class="carousel-caption d-none d-md-block">
-		    <h5 class="black">{$I.titulo}</h5>
-		    <p class="black">{$I.descricao}</p>
-		  </div> -->
+         <div class="carousel-caption d-none d-md-block">
+		    <h5>{$I.banner_titulo}</h5>
+		    <p>{$I.banner_descricao}</p>
+		  </div> 
       </div>
  {/foreach}
      
