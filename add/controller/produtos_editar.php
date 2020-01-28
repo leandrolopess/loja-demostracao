@@ -7,6 +7,15 @@ $id = $_GET['pro_id'];
 $smarty = new Template();
 $gravar = new Produtos();
 
+
+if(Login::LogadoADM()){
+	$smarty->assign('USER', $_SESSION['ADM']['user_nome']);
+	$smarty->assign('DATA', $_SESSION['ADM']['user_data']);
+	$smarty->assign('HORA', $_SESSION['ADM']['user_hora']);
+	$smarty->assign('SOBRENOME', $_SESSION['ADM']['user_sobrenome']);
+	$smarty->assign('STATUS', $_SESSION['ADM']['user_status']);
+}
+
 $produtos = new Produtos();
 $produtos->GetProdutosID($id);
 
@@ -36,7 +45,7 @@ $smarty->assign('ERRO', '');
 $smarty->assign('SUCESSO', '');
 $smarty->assign('PRO', $produtos->GetItens());
 
-if(isset($_POST['pro_apagar']) && isset($_POST['pro_id_apagar']) && $_POST['confirmar'] == 'SIM'){
+if(isset($_POST['pro_apagar']) && isset($_POST['pro_id_apagar']) && $_POST['confirmar'] == 'SIM' && $_SESSION['ADM']['user_status'] == 'admin'){
   if($gravar->Apagar($_POST['pro_id_apagar'])){
        echo '<center><div class="col-md-9"><ul class="alert alert-warning margin-top" role="alert">
    <li> Apagando produto...</div></li>
@@ -51,7 +60,7 @@ if(isset($_POST['pro_apagar']) && isset($_POST['pro_id_apagar']) && $_POST['conf
   }
 }
 
-if(isset($_POST['pro_nome']) && isset($_POST['pro_valor'])){
+if(isset($_POST['pro_nome']) && isset($_POST['pro_valor']) && $_SESSION['ADM']['user_status'] == 'admin'){
 $pro_nome      = $_POST['pro_nome'];
 $pro_categoria = $_POST['pro_categoria'];
 $pro_ativo     = $_POST['pro_ativo'];
@@ -96,6 +105,13 @@ if($gravar->Alterar($id)){
  }
 }
 
+// Verifica se o usuário é admin
+if(isset($_POST['pro_nome']) && isset($_POST['pro_valor']) && $_SESSION['ADM']['user_status'] != 'admin'){
+  echo'<script>alert("Acesso Negado!!")</script>';
+}
+if(isset($_POST['pro_apagar']) && isset($_POST['pro_id_apagar']) && $_POST['confirmar'] == 'SIM' && $_SESSION['ADM']['user_status'] != 'admin'){
+  echo'<script>alert("Acesso Negado!!")</script>';
+}
 
 //$smarty->display('./inc/top-painel.tpl');
 //$smarty->display('./inc/header.tpl');

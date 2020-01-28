@@ -18,6 +18,7 @@ if(Login::LogadoADM()){
 	$smarty->assign('DATA', $_SESSION['ADM']['user_data']);
 	$smarty->assign('HORA', $_SESSION['ADM']['user_hora']);
 	$smarty->assign('SOBRENOME', $_SESSION['ADM']['user_sobrenome']);
+	$smarty->assign('STATUS', $_SESSION['ADM']['user_status']);
 }
 
 

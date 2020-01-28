@@ -119,6 +119,7 @@ class Login extends Conexao{
              $_SESSION['ADM']['user_pw']     =  $lista['user_pw'];
              $_SESSION['ADM']['user_data']     = Sistema::DataAtualBR();
              $_SESSION['ADM']['user_hora']     = Sistema::HoraAtual();
+             $_SESSION['ADM']['user_status']     =  $lista['user_status'];
 
              return TRUE;
            // caso o login seja incorreto 
@@ -157,6 +158,7 @@ class Login extends Conexao{
              $_SESSION['ADM']['user_pw']     =  $lista['user_pw'];
              $_SESSION['ADM']['user_data']     = Sistema::DataAtualBR();
              $_SESSION['ADM']['user_hora']     = Sistema::HoraAtual();
+             $_SESSION['ADM']['user_status']     =  $lista['user_status'];
 
              return TRUE;
            // caso o login seja incorreto 
