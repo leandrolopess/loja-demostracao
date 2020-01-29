@@ -97,46 +97,50 @@ switch ($ACAO) {
 
 		}
 
+		$site_tema = Config::GET_TEMA;
 		echo '<div id="preloader">
-         <img class="preloader" src="http://localhost/loja_adaptada/view/assets/images/gif/loading.gif" alt="">
+         <img class="preloader" src="'.$site_tema.'/assets/images/gif/loading.gif" alt="">
       </div>';
-
 		break;
 
 	// Deleta itens do carrinho
 	case 'del':
+		$site_tema = Config::GET_TEMA;
 		$this->CarrinhoDEL($id);
 		echo '<div id="preloader">
-         <img class="preloader" src="http://localhost/loja_adaptada/view/assets/images/gif/loading.gif" alt="">
+         <img class="preloader" src="'.$site_tema.'/assets/images/gif/loading.gif" alt="">
       </div>';
 		break;
          
     // Limpa o carrinho
 	case 'limpar':
+		$site_tema = Config::GET_TEMA;
 		$this->CarrinhoLimpar();
 		echo '<div id="preloader">
-         <img class="preloader" src="http://localhost/loja_adaptada/view/assets/images/gif/loading.gif" alt="">
+         <img class="preloader" src="'.$site_tema.'/assets/images/gif/loading.gif" alt="">
       </div>';
 		break;
         
         // Aumenta a quantidade de itens no carrinho
 		case 'aumenta':
+		$site_tema = Config::GET_TEMA;
 		if($_SESSION['PRO'][$ID]['QTD'] > 0){
 		$_SESSION['PRO'][$ID]['QTD'] += $QTD1;
 		}
 		echo '<div id="preloader">
-         <img class="preloader" src="http://localhost/loja_adaptada/view/assets/images/gif/loading.gif" alt="">
+         <img class="preloader" src="'.$site_tema.'/assets/images/gif/loading.gif" alt="">
       </div>';
         break;
 
        // Diminui a quantidade de itens no carrinho
-      case 'diminui':
+	  case 'diminui':
+		$site_tema = Config::GET_TEMA;
 		if($_SESSION['PRO'][$ID]['QTD'] > 1){
 			$_SESSION['PRO'][$ID]['QTD'] -= $QTD1;
 		}
 		
 		echo '<div id="preloader">
-         <img class="preloader" src="http://localhost/loja_adaptada/view/assets/images/gif/loading.gif" alt="">
+         <img class="preloader" src="'.$site_tema.'/assets/images/gif/loading.gif" alt="">
       </div>';
 
 		break;

@@ -9,7 +9,7 @@ const SITE_EMAIL_ADM = "leandrinholopes069@gmail.com";
 const BD_LIMIT_POR_PAG = 12;
 const BD_LIMIT_POR_PRODUTOS = 4;
 const SITE_CEP = '96810046';
-const GET_TEMA = "http://localhost/vanusa/view";
+const GET_TEMA = "http://localhost/loja_demostracao/view";
 
 
  //const SITE_URL = "http://leandro.epizy.com";
