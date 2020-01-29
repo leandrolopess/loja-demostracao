@@ -83,9 +83,10 @@ $smarty->assign('REF', $ref);
 $smarty->display('finalizar.tpl');
 
 }else{
+	$site_home = Config::SITE_HOME;
 	echo '<div class="not txt-center margin-bottom">
 <h4 class="margin-bottom-10">Seu carrinho está vazio!!</h4>
-<a href="http://localhost/loja/" class="continuar-btn">Voltar para a loja</a>
+<a href="'.$site_home.'" class="continuar-btn">Voltar para a loja</a>
 </div>';
 }
 }
