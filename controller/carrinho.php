@@ -72,9 +72,10 @@ $smarty->assign('TOTAL_COM_FRETE', Sistema::MoedaBR($carrinho->GetTotal() + $val
 
 $smarty->display('carrinho.tpl');
 }else{
+	$site_home = Config::SITE_HOME;
 	echo '<div class="not txt-center margin-bottom margin-top">
 <h4 class="margin-bottom-10">Seu carrinho está vazio!!</h4>
-<a href="http://localhost/loja_adaptada/" class="continuar-btn">Voltar para a loja</a>
+<a href="'.$site_home.'" class="continuar-btn">Voltar para a loja</a>
 </div>';
 }
 ?>
