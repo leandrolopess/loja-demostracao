@@ -70,8 +70,9 @@ if(isset($_POST['cli_nome']) and isset($_POST['cli_email']) and isset($_POST['cl
 
 
     // Mensagem ao cadastrar com sucesso
+    $site_tema = Config::GET_TEMA;
     echo '<div id="preloader">
-         <img class="preloader" src="http://localhost/loja/view/assets/images/gif/loading.gif" alt="">
+         <img class="preloader" src="'.$site_tema.'/assets/images/gif/loading.gif" alt="">
       </div>';
    Rotas::Redirecionar(1, Rotas::pag_ClienteConta());
 
