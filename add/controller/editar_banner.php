@@ -8,7 +8,7 @@ $smarty = new Template();
 $banner = new Banner();
 
 $banner->GetBannerID($id);
-
+$smarty->assign('GET_SITE_ADD', Rotas::get_SiteAdd());
 $smarty->assign('GET_TEMA', Rotas::get_SiteTEMA());
 $smarty->assign('GET_HOME', Rotas::get_SiteHOME());
 $smarty->assign('PAG_BANNERS', Rotas::pag_Banners());

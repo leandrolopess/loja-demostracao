@@ -40,8 +40,9 @@ $info_loja    = $_POST['info_loja'];
 $info->Preparar($info_rua, $info_numero, $info_cidade, $info_estado, $info_cep, $info_telefone, $info_whats, $info_email, $info_face, $info_twitter, $info_insta, $info_loja);
 
 if($info->Alterar($id)){
+  $site_tema = Config::GET_TEMA;
   echo '<div id="preloader">
-         <img class="preloader" src="http://localhost/loja_adaptada/view/assets/images/gif/loading.gif" alt="">
+         <img class="preloader" src="'.$site_tema.'/assets/images/gif/loading.gif" alt="">
       </div>';
   header("Refresh: 1");
 }else{
