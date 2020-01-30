@@ -12,7 +12,7 @@ const SITE_CEP = '96810046';
 const GET_TEMA = "http://localhost/loja_demostracao/view";
 const SITE_HOME = "http://localhost/loja_demostracao/";
 const PAG_CLIENTES = "http://localhost/loja_demostracao/add/clientes?p=1";
-
+const PAG_PEDIDOS = "http://localhost/loja_demostracao/add/pedidos?p=1";
 
  //const SITE_URL = "http://leandro.epizy.com";
  //const SITE_PASTA = "loja_adaptada";
