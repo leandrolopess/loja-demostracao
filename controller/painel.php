@@ -12,8 +12,9 @@ if(Login::Logado()){
    $smarty->assign('PAG_LOGOFF', Rotas::pag_Logoff());
 }
 if(Login::Logado() == FALSE){
+    $site_tema = Config::GET_TEMA;
 echo '<div id="preloader">
-<img class="preloader" src="http://localhost/loja_adaptada/view/assets/images/gif/loading.gif" alt="">
+<img class="preloader" src="'.$site_tema.'/assets/images/gif/loading.gif" alt="">
     </div>';
 Rotas::Redirecionar(0, Rotas::pag_MinhaConta());
 }
