@@ -58,10 +58,7 @@ if($pedidos->TotalDados() > 0){
 	$smarty->display('add_pedidos.tpl');
 }else{
 	echo '<center><div class="col-9 alert alert-warning margin-top margin-bottom">Nenhum pedido encontrado</div>
-  <a href="http://localhost/loja_adaptada/add/pedidos?p=1" class="btn bg-azul branco margin-bottom">Voltar</a>
   </center>';
 }
-
-
 
 ?>
