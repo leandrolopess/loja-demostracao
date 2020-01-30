@@ -11,6 +11,7 @@ const BD_LIMIT_POR_PRODUTOS = 4;
 const SITE_CEP = '96810046';
 const GET_TEMA = "http://localhost/loja_demostracao/view";
 const SITE_HOME = "http://localhost/loja_demostracao/";
+const PAG_CLIENTES = "http://localhost/loja_demostracao/add/clientes?p=1";
 
 
  //const SITE_URL = "http://leandro.epizy.com";
